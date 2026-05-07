@@ -14,11 +14,11 @@ The main goal is to compare different prompt formulations while keeping the expe
 
 ## 1. Files
 
-| File                     | Purpose                                                                                                                                                                |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Evaluation.ipynb`       | Main experiment notebook. Loads data, creates or loads the validation subset, runs Gemini inference, saves predictions, resumes incomplete runs, and computes metrics. |
-| `prompt_templates.ipynb` | Utility notebook for printing and inspecting prompt templates and few-shot examples before running the full experiment.                                                |
-| `visualization.ipynb`    | Analysis notebook for merging result files, recomputing metrics, generating comparison tables, confusion matrices, and plots.                                          |
+| File | Purpose |
+|---|---|
+| `Evaluation.ipynb` | Main experiment notebook. Loads data, creates or loads the validation subset, runs Gemini inference, saves predictions, resumes incomplete runs, and computes metrics. |
+| `prompt_templates.ipynb` | Utility notebook for printing and inspecting prompt templates and few-shot examples before running the full experiment. |
+| `visualization.ipynb` | Analysis notebook for merging result files, recomputing metrics, generating comparison tables, confusion matrices, and plots. |
 
 ---
 
@@ -308,14 +308,14 @@ Do not delete the result CSV unless you want to restart that prompt from the beg
 
 The main output folder contains:
 
-| Output file                                  | Description                                            |
-| -------------------------------------------- | ------------------------------------------------------ |
-| `mahed_val_subset_500.csv`                   | Fixed validation subset used for evaluation.           |
-| `few_shot_examples.csv`                      | Fixed few-shot examples sampled from the training set. |
-| `results_<prompt_type>_gemini_2_5_flash.csv` | Row-level predictions for each prompt type.            |
-| `metrics_summary.csv`                        | Overall metrics for the selected prompt types.         |
-| `metrics_per_class.csv`                      | Per-class precision, recall, F1, and support.          |
-| `confusion_matrices.json`                    | Confusion matrices for each prompt type.               |
+| Output file | Description |
+|---|---|
+| `mahed_val_subset_500.csv` | Fixed validation subset used for evaluation. |
+| `few_shot_examples.csv` | Fixed few-shot examples sampled from the training set. |
+| `results_<prompt_type>_gemini_2_5_flash.csv` | Row-level predictions for each prompt type. |
+| `metrics_summary.csv` | Overall metrics for the selected prompt types. |
+| `metrics_per_class.csv` | Per-class precision, recall, F1, and support. |
+| `confusion_matrices.json` | Confusion matrices for each prompt type. |
 
 Each row-level result file includes columns such as:
 
